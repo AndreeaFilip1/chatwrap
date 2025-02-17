@@ -8,7 +8,8 @@ def cli(params):
 
     client = LLMClient(LLM_SERVER_URL)
 
-    client.send_request(params.prompt, model=params.model, temperature=params.temperature, streaming=params.streaming)
+    response = client.send_request(params.prompt, model=params.model, temperature=params.temperature, streaming=params.streaming)
+    print(f'Response = {response}')
 
 if __name__ == '__main__':
     parser = ArgumentParser('Chat wrap')

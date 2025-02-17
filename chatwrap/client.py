@@ -63,6 +63,7 @@ class LLMClient:
         if (response.status_code == 200):
             print(f'Yesss, you are awesome')
             print(f'{response.json()})')
+            return response.json()
 
 
 
